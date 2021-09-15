@@ -114,8 +114,8 @@ class Question(models.Model):
     grade=models.FloatField(null=False)
     # <HINT> A sample model method to calculate if learner get the score of the question
     
-    def __str__(sefl):
-        return self.question_id
+    def __str__(self):
+        return str(self.question_id)+': '+self.question_text
 
     def is_get_score(self, selected_ids):
         all_answers = self.choice_set.filter(is_correct=True).count()
