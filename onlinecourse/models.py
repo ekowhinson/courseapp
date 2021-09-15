@@ -105,7 +105,7 @@ class Enrollment(models.Model):
     # Other fields and methods you would like to design
 class Question(models.Model):
     # Foreign key to lesson
-    question_id=models.IntegerField(null=False)
+    #question_id=models.IntegerField(null=False)
     course=models.ManyToManyField(Course)
     lesson_id=models.ForeignKey(Lesson,on_delete=models.CASCADE)
     # question text
